@@ -1,3 +1,3 @@
-import someFn from "./test";
+import { render } from "react-dom";
 
-someFn();
+render(<div>Hello world!!!</div>, document.getElementById("root"));
