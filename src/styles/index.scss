@@ -1,0 +1,10 @@
+@import "./reset.scss";
+@import "./variables/global";
+@import "./themes/normal";
+@import "./themes/dark";
+
+html,
+body,
+#root {
+  height: 100%;
+}
