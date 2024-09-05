@@ -1,0 +1,29 @@
+.app.dark {
+  background-color: var(--gray-900);
+  color: var(--gray-500);
+
+  font-family: Roboto, sans-serif;
+  font-size: 0.875rem;
+
+  .sidebar {
+    &-wrapper {
+      border-right-color: var(--border-color-dark-theme);
+    }
+
+    &-menu {
+      &-link {
+        color: var(--white-50);
+
+        &.active,
+        &:hover {
+          color: var(--white);
+          background-color: var(--dark-theme-gray-12);
+        }
+      }
+    }
+  }
+
+  .footer {
+    border-top-color: var(--border-color-dark-theme);
+  }
+}
