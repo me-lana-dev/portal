@@ -5,6 +5,7 @@ import { MainPage } from "pages/MainPage";
 import { classNames } from "shared/lib/classNames/classNames";
 import { useTheme } from "app/providers/ThemeProvider";
 import "./styles/index.scss";
+import { AppRouter } from "./providers/router";
 
 export enum Theme {
   LIGHT = "light",
@@ -46,12 +47,7 @@ const App = () => {
       </header>
       <div className="content-wrapper">
         <div className="content">
-          <Suspense fallback={<div>Loading...</div>}>
-            <Routes>
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/" element={<MainPage />} />
-            </Routes>
-          </Suspense>
+          <AppRouter />
         </div>
       </div>
       <footer className="footer">Copyright © 2023. All right reserved</footer>
