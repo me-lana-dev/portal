@@ -8,8 +8,8 @@ interface SidebarHeaderProps {
 export const SidebarHeader = ({ className }: SidebarHeaderProps) => {
   return (
     <div className={classNames(cls.SidebarHeader, {}, [className])}>
-      <div className={classNames(cls.logoIcon, {}, [])}>L</div>
-      <div className={classNames(cls.logoName, {}, [])}>ogotype</div>
+      <div>L</div>
+      <div>ogotype</div>
     </div>
   );
 };

@@ -8,32 +8,10 @@ interface SidebarProps {
   className?: string;
 }
 
-export const Sidebar: FC<SidebarProps> = ({ className }) => {
+export const Sidebar: FC<SidebarProps> = ({ className, children }) => {
   return (
     <aside className={classNames(cls.sidebar, {}, [className])}>
-      <SidebarHeader className={classNames(cls.sidebarHeader, {}, [])} />
-      <ul className={classNames(cls.sidebarMenu, {}, [])}>
-        <li className={classNames(cls.sidebarMenuItem, {}, [className])}>
-          <AppLink theme={AppLinkTheme.LIGHT} to={"/"}>
-            <span className={classNames(cls.sidebarMenuIcon, {}, [className])}>
-              I
-            </span>
-            <span className={classNames(cls.sidebarMenuTitle, {}, [className])}>
-              Главная станица
-            </span>
-          </AppLink>
-        </li>
-        <li className={classNames(cls.sidebarMenuItem, {}, [className])}>
-          <AppLink theme={AppLinkTheme.LIGHT} to={"/about"}>
-            <span className={classNames(cls.sidebarMenuIcon, {}, [className])}>
-              I
-            </span>
-            <span className={classNames(cls.sidebarMenuTitle, {}, [className])}>
-              О сайте
-            </span>
-          </AppLink>
-        </li>
-      </ul>
+      {children}
     </aside>
   );
 };
