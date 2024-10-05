@@ -1,0 +1,14 @@
+.Sidebar {
+  &Header {
+    height: 65px;
+    padding: 0 1rem;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    font-size: 1.7rem;
+    letter-spacing: 4px;
+    color: #20c997;
+  }
+}
