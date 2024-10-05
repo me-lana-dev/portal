@@ -6,12 +6,10 @@
   font-size: 0.875rem;
 
   .sidebar {
-    &-wrapper {
-      border-right-color: var(--border-color-dark-theme);
-    }
+    border-right-color: var(--border-color-dark-theme) !important;
 
-    &-menu {
-      &-link {
+    &Menu {
+      &Link {
         color: var(--white-50);
 
         &.active,

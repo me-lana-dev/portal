@@ -1,0 +1,38 @@
+.sidebar {
+  grid-area: Sidebar;
+
+  display: flex;
+  flex-direction: column;
+
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 260px;
+
+  border-right: var(--border-width) var(--border-style) var(--border-color);
+
+  &Header {
+    height: 65px;
+    padding: 0 1rem;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    font-size: 1.7rem;
+    letter-spacing: 4px;
+    color: #20c997;
+  }
+
+  &Menu {
+    padding: 1rem;
+
+    &Item {
+      margin-top: 5px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}

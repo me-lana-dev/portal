@@ -6,6 +6,7 @@ import { classNames } from "shared/lib/classNames/classNames";
 import { useTheme } from "app/providers/ThemeProvider";
 import "./styles/index.scss";
 import { AppRouter } from "./providers/router";
+import { Sidebar } from "widgets/Sidebar";
 
 export enum Theme {
   LIGHT = "light",
@@ -17,26 +18,7 @@ const App = () => {
 
   return (
     <div className={classNames("app", {}, [theme])}>
-      <aside className="sidebar-wrapper">
-        <div className="sidebar-header">
-          <div className="logo-icon">L</div>
-          <div className="logo-name">ogotype</div>
-        </div>
-        <ul className="sidebar-menu">
-          <li className="sidebar-menu-item">
-            <Link to={"/"} className="sidebar-menu-link active">
-              <span className="sidebar-menu-icon">I</span>
-              <span className="sidebar-menu-title">Главная станица</span>
-            </Link>
-          </li>
-          <li className="sidebar-menu-item">
-            <Link to={"/about"} className="sidebar-menu-link">
-              <span className="sidebar-menu-icon">I</span>
-              <span className="sidebar-menu-title">О сайте</span>
-            </Link>
-          </li>
-        </ul>
-      </aside>
+      <Sidebar className={classNames("sidebar", {}, [])} />
       <header className="header">
         <nav className="navbar">
           <div className="toggle-icon">Menю</div>

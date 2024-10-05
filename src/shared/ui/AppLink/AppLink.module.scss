@@ -1,0 +1,35 @@
+.AppLink {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding: 0.375rem 0.625rem;
+  color: var(--gray-700);
+
+  &.active,
+  &:hover {
+    color: var(--light-theme-purple);
+    text-decoration: none;
+    background-color: var(--light-theme-purple-10);
+  }
+
+  &Icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white-50);
+    width: 21px;
+    height: 24px;
+  }
+
+  &Title {
+    margin-left: 0.625rem;
+  }
+}
+
+.primary {
+  color: red;
+}
+
+.secondary {
+  color: green;
+}
