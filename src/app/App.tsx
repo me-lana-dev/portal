@@ -1,15 +1,11 @@
-import { Suspense } from "react";
-import { Link, Route, Routes } from "react-router-dom";
-import { AboutPage } from "pages/AboutPage";
-import { MainPage } from "pages/MainPage";
 import { classNames } from "shared/lib/classNames/classNames";
 import { useTheme } from "app/providers/ThemeProvider";
 import "./styles/index.scss";
 import { AppRouter } from "./providers/router";
 import { Sidebar } from "widgets/Sidebar";
 import { AppLink, AppLinkTheme } from "shared/ui/AppLink/AppLink";
-import { SidebarHeader } from "widgets/SidebarHeader/ui/SidebarHeader";
-import { SidebarMenu } from "widgets/SidebarMenu/ui/SidebarMenu";
+import { SidebarHeader } from "widgets/SidebarHeader";
+import { SidebarMenu } from "widgets/SidebarMenu";
 import { SidebarMenuItem } from "widgets/SidebarMenuItem";
 
 export enum Theme {
