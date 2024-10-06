@@ -9,6 +9,8 @@ import { AppRouter } from "./providers/router";
 import { Sidebar } from "widgets/Sidebar";
 import { AppLink, AppLinkTheme } from "shared/ui/AppLink/AppLink";
 import { SidebarHeader } from "widgets/SidebarHeader/ui/SidebarHeader";
+import { SidebarMenu } from "widgets/SidebarMenu/ui/SidebarMenu";
+import { SidebarMenuItem } from "widgets/SidebarMenuItem";
 
 export enum Theme {
   LIGHT = "light",
@@ -22,24 +24,32 @@ const App = () => {
     <div className={classNames("app", {}, [theme])}>
       <Sidebar className={classNames("sidebar", {}, [])}>
         <SidebarHeader className={classNames("sidebarHeader", {}, [])} />
-        <ul className={classNames("sidebarMenu", {}, [])}>
-          <li className={classNames("sidebarMenuItem", {}, [])}>
-            <AppLink theme={AppLinkTheme.LIGHT} to={"/"}>
+        <SidebarMenu className={classNames("sidebarMenu", {}, [])}>
+          <SidebarMenuItem className={classNames("sidebarMenuItem", {}, [])}>
+            <AppLink
+              className={classNames("sidebarMenuLink", {}, [])}
+              theme={AppLinkTheme.LIGHT}
+              to={"/"}
+            >
               <span className={classNames("sidebarMenuIcon", {}, [])}>I</span>
               <span className={classNames("sidebarMenuTitle", {}, [])}>
                 Главная станица
               </span>
             </AppLink>
-          </li>
-          <li className={classNames("sidebarMenuItem", {}, [])}>
-            <AppLink theme={AppLinkTheme.LIGHT} to={"/about"}>
+          </SidebarMenuItem>
+          <SidebarMenuItem className={classNames("sidebarMenuItem", {}, [])}>
+            <AppLink
+              className={classNames("sidebarMenuLink", {}, [])}
+              theme={AppLinkTheme.LIGHT}
+              to={"/about"}
+            >
               <span className={classNames("sidebarMenuIcon", {}, [])}>I</span>
               <span className={classNames("sidebarMenuTitle", {}, [])}>
                 О сайте
               </span>
             </AppLink>
-          </li>
-        </ul>
+          </SidebarMenuItem>
+        </SidebarMenu>
       </Sidebar>
       <header className="header">
         <nav className="navbar">
