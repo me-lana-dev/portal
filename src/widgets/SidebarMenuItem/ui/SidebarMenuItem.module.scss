@@ -1,0 +1,8 @@
+.SidebarMenuItem {
+  list-style-type: none;
+  margin-top: 5px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
